@@ -25,7 +25,6 @@ game_state.story.prototype = {
         //this is the ground
         var ground = this.platforms.create(0, game.world.height - 88, 'ground');
         
-
         //scale the ground to fit the width of the game (the original sprite is 400x32 in size)
         ground.scale.setTo(2, 2);
 
@@ -47,23 +46,19 @@ game_state.story.prototype = {
         this.player.body.setSize(90, 140, 55, 30);
 
         // the story
-        this.storyText = game.add.text(16, 16, ' This alien here is Cephus \n His spaceship to Mars took off without him. \n Help Cephus climb the falling debris \n to reach the spaceship before it leaves him behind!', {
+        this.storyText = game.add.text(16, 16, ' This alien here is Cephus \n His spaceship going back to his home planet \n took off without him. \n Help Cephus climb the falling debris to reach the \n spaceship before it leaves him behind!', {
             fontSize: '32px',
             fill: 'white'
         });
         
-        
-        
         document.addEventListener("click", eventFunctions.mainStarter);
         
-
     },
     update: function() {
         // Collide the player and the platforms
         game.physics.arcade.collide(this.player, this.platforms);
         game.physics.arcade.collide(this.player, this.ground);
         
-
     }
 };
 

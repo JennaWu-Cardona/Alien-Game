@@ -1,4 +1,4 @@
-/* global game phaser game_state */
+/* global game phaser game_state eventFunctions*/
 
 game_state.badEnding = function() {};
 game_state.badEnding.prototype = {
@@ -13,7 +13,7 @@ game_state.badEnding.prototype = {
         game.add.sprite(0, 0, 'sky');
         
         //this is the spaceship
-        game.add.sprite(250,190, 'spaceship');
+        game.add.sprite(250, 190, 'spaceship');
         
         //this is the alien
         this.player = game.add.sprite(50, 350, 'alien');
@@ -24,6 +24,7 @@ game_state.badEnding.prototype = {
             fill: 'white'
         });
         
+        document.addEventListener("click", eventFunctions.mainStarter);
 
     },
 

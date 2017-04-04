@@ -20,7 +20,9 @@ game_state.goodEndingTwo.prototype = {
         
         //this is the spaceship
         this.ship = game.add.sprite(250, 190, 'spaceship');
-        this.ship.frame = 1;
+        this.ship.frame = 4;
+        // this.ship.body.setSize(90, 140, 55, 30);
+
 
         // the story
         this.storyText = game.add.text(16, 16, 'Congratulations! \nYou made it! \nThank you for helping Cephus get home! ', {
@@ -28,7 +30,7 @@ game_state.goodEndingTwo.prototype = {
             fill: 'white'
         });
 
-        // document.addEventListener("click", eventFunctions.mainTwoStarter);
+        document.addEventListener("click", eventFunctions.storyStarter);
 
     },
 

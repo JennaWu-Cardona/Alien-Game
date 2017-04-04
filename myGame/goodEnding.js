@@ -17,7 +17,7 @@ game_state.goodEnding.prototype = {
         game.add.sprite(250, 190, 'spaceship');
 
         // the story
-        this.storyText = game.add.text(16, 16, 'Congratulations! \nYou have made it to the ship! \nNow onto Mars! \nMove from planet to planet to refuel! ', {
+        this.storyText = game.add.text(16, 16, 'Congratulations! \nYou have made it to the ship! \nNow we go onward! \nMove from planet to planet to refuel! ', {
             fontSize: '32px',
             fill: 'white'
         });
@@ -45,10 +45,11 @@ game_state.goodEnding.prototype = {
 
     update: function() {
         //this starts the game
+        // document.addEventListener("click", eventFunctions.mainTwoStarter);
 
 
     },
-
+    
 };
 game.state.add('goodEnding', game_state.goodEnding);
 // game.state.start('goodEnding');
